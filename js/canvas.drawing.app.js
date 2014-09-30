@@ -75,7 +75,7 @@ setRadius(defaultRad);
 
 /* Scripts para cambiar dinámicamente el Color del pincel */
 
-var colors = ['black', 'grey', 'lightgrey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var colors = [ 'white', 'black', 'grey', 'lightgrey', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
 
 for (var i = 0, n = colors.length; i < n; i++){
 	var swatch = document.createElement('div');
@@ -107,10 +107,14 @@ function setSwatch(e){
 
 };
 
-setSwatch({target: document.getElementsByClassName('swatch')[0]});
+setSwatch({target: document.getElementsByClassName('swatch')[1]});
 
 
 
+
+$('#clearStage').on('click', function() {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+});
 
 
 
